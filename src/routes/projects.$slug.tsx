@@ -52,7 +52,12 @@ function ProjectDetail() {
       }
       gsap
         .timeline({ defaults: { ease: eases.reveal } })
-        .fromTo(".detail-line > span", { yPercent: 110 }, { yPercent: 0, duration: 1.2, stagger: 0.08 }, 0.15)
+        .fromTo(
+          ".detail-line > span",
+          { yPercent: 110 },
+          { yPercent: 0, duration: 1.2, stagger: 0.08 },
+          0.15,
+        )
         .fromTo(
           ".detail-hero-media",
           { clipPath: "inset(0% 0% 100% 0%)" },
@@ -97,7 +102,10 @@ function ProjectDetail() {
         </section>
 
         <section className="section-ag">
-          <div ref={body} className="container-ag grid gap-[8vh] md:grid-cols-12">
+          <div
+            ref={body}
+            className="container-ag grid gap-y-[8vh] md:grid-cols-12 md:gap-x-[var(--gap)]"
+          >
             {project.sections.map((s, i) => (
               <div key={s.label} className="contents">
                 <p className="label-ag text-muted-ag md:col-span-2">
@@ -113,7 +121,10 @@ function ProjectDetail() {
                 </div>
 
                 {i % 2 === 1 && (
-                  <div className="media-wrap h-[52vh] md:col-span-12 md:h-[80vh]" data-parallax-scope>
+                  <div
+                    className="media-wrap h-[52vh] md:col-span-12 md:h-[80vh]"
+                    data-parallax-scope
+                  >
                     <img
                       src={project.gallery[(i - 1) / 2 === 0 ? 0 : 1] ?? project.image}
                       alt={`${project.title} — ${s.label}`}
