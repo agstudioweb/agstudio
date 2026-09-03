@@ -1,29 +1,23 @@
-# Welcome to your Lovable project
+# AGSTUDIO
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+Site institucional de Augusto Vargas / AGSTUDIO, desenvolvido com React, TanStack Start, TypeScript e Tailwind CSS.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requisitos: Node.js 22+ e npm.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
 
-## Built with
+O servidor local inicia em `http://localhost:8080`.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Produção
+
+```sh
+npm run build
+npm run preview
+```
+
+Defina `VITE_SITE_URL` com a URL pública do site para gerar os metadados canônicos das páginas de serviço.

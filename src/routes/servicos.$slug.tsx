@@ -7,7 +7,7 @@ import { SectionId, TechRule, MicroLabel, CornerMarks } from "@/components/syste
 import { SERVICES, getService, type Service } from "@/data/services";
 
 const WHATSAPP = "https://wa.me/5514996800019";
-const SITE_URL = "https://pixel-perfect-capture-291.lovable.app";
+const SITE_URL = import.meta.env.VITE_SITE_URL ?? "https://agstudio.com.br";
 
 export const Route = createFileRoute("/servicos/$slug")({
   loader: ({ params }) => {
