@@ -745,8 +745,8 @@
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: clamp(1.7rem, 7vw, 2.35rem);
-    max-width: 17ch;
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    max-width: 13ch;
   }
 
   .display-xl {
@@ -772,6 +772,7 @@
   }
 
   .hero-lead {
-    max-width: 34ch;
+    max-width: 31ch;
+    line-height: 1.6;
   }
 }

@@ -26,7 +26,12 @@ export function Hero({ start }: { start: boolean }) {
             { yPercent: 0, y: 0, duration: 1.25, stagger: 0.09 },
             0.15,
           )
-          .fromTo(".hero-lead", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, "-=0.75")
+          .fromTo(
+            ".hero-lead",
+            { y: 24, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8 },
+            "-=0.75",
+          )
           .fromTo(
             ".hero-chip",
             { y: 18, opacity: 0 },
@@ -91,7 +96,7 @@ export function Hero({ start }: { start: boolean }) {
   return (
     <section
       ref={root}
-      className="hero relative flex items-center overflow-hidden pt-[10vh] pb-[8vh] md:min-h-[100svh] md:pt-[18vh] md:pb-[10vh]"
+      className="hero relative flex min-h-[100svh] items-center overflow-hidden py-[12vh] md:pt-[18vh] md:pb-[10vh]"
     >
       {/* decorative layers */}
       <div aria-hidden className="hero-deco pointer-events-none absolute inset-0">
@@ -103,11 +108,11 @@ export function Hero({ start }: { start: boolean }) {
 
       <div className="container-ag relative z-10 flex flex-col items-center text-center">
         <div className="hero-meta flex flex-wrap items-center justify-center gap-x-7 gap-y-3 label-ag text-muted-ag">
-          <span className="flex items-center gap-2">
+          <span className="hidden items-center gap-2 md:flex">
             <span className="ag-status-dot" />
             Augusto Vargas — Creative Developer
           </span>
-          <span className="flex items-center gap-2">
+          <span className="hidden items-center gap-2 md:flex">
             <span className="ag-status-dot" />
             BR → Worldwide
           </span>
@@ -136,7 +141,7 @@ export function Hero({ start }: { start: boolean }) {
           semanas, não em meses.
         </p>
 
-        <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5">
+        <div className="mt-7 hidden flex-wrap items-center justify-center gap-2.5 md:flex">
           {["Web Design", "Creative Code", "Motion", "IA"].map((t) => (
             <span
               key={t}
@@ -156,13 +161,18 @@ export function Hero({ start }: { start: boolean }) {
           >
             Iniciar projeto
           </a>
-          <a href="#criacoes" onClick={jump} data-cursor="next" className="roll-group label-ag text-muted-ag">
+          <a
+            href="#criacoes"
+            onClick={jump}
+            data-cursor="next"
+            className="roll-group label-ag hidden text-muted-ag md:inline-flex"
+          >
             Ver o que faço ↓
           </a>
         </div>
       </div>
 
-      <ScrollCue className="absolute bottom-[3vh] left-1/2 -translate-x-1/2 text-muted-ag" />
+      <ScrollCue className="absolute bottom-[3vh] left-1/2 hidden -translate-x-1/2 text-muted-ag md:block" />
     </section>
   );
 }
