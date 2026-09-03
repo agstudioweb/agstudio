@@ -19,7 +19,7 @@ import { SectionProgress } from "@/components/system/TechLayer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Augusto Vargas — Creative Developer & Web Designer" },
+      { title: "AGSTUDIO" },
       {
         name: "description",
         content:

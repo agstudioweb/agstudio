@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Augusto Vargas — Creative Developer" },
+      { title: "AGSTUDIO" },
       {
         name: "description",
         content: "Design, desenvolvimento e IA para produtos digitais que não parecem templates.",
