@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/animations/useReveal";
 import { TextReveal } from "@/components/TextReveal";
-import dashboardSaaS from "@/assets/dashboard-saas.png.asset.json";
+import dashboardSaaS from "@/assets/dashboard-saas.png";
 import capAi from "@/assets/cap-ai.jpg";
-import brandIdentity from "@/assets/brand-identity.png.asset.json";
-import landingTrafego from "@/assets/landing-trafego.png.asset.json";
+import brandIdentity from "@/assets/brand-identity.png";
+import landingTrafego from "@/assets/landing-trafego.png";
 import capMotion from "@/assets/cap-motion.jpg";
 import capAutomations from "@/assets/cap-automations.jpg";
 import { SectionId, CornerMarks } from "@/components/system/TechLayer";
@@ -25,7 +25,7 @@ const CAPABILITIES: Capability[] = [
   {
     index: "01",
     kind: "Web Apps",
-    image: dashboardSaaS.url,
+    image: dashboardSaaS,
     title: "Dashboards e painéis em tempo real",
     body: "Exemplo: painel de controle de SaaS com métricas de receita, funil de vendas, lista de clientes e gráficos atualizados — tudo em uma interface escura, limpa e pronta para escalar.",
     examples: ["SaaS dashboard", "CRM interno", "Marketplace", "Área de membros", "Full-stack"],
@@ -43,7 +43,7 @@ const CAPABILITIES: Capability[] = [
   {
     index: "03",
     kind: "Web Design",
-    image: brandIdentity.url,
+    image: brandIdentity,
     title: "Identidade visual e design de marca",
     body: "Exemplo: sistema de identidade completo — logomarca, ícone, aplicações em dispositivos e redes sociais — com direção visual coesa, tipografia própria e paleta que comunica confiança.",
     examples: ["Site de estúdio", "Portfólio", "Site institucional", "Design system", "Interface"],
@@ -52,7 +52,7 @@ const CAPABILITIES: Capability[] = [
   {
     index: "04",
     kind: "Landing Pages",
-    image: landingTrafego.url,
+    image: landingTrafego,
     title: "Landing pages de alta conversão",
     body: "Exemplo: página de captura para lançamento com hero claro, formulário de e-mail, prova social, faixa de urgência e CTA acima da dobra — tudo otimizado para gerar lead e vender.",
     examples: ["Lançamento de produto", "Captura de leads", "Evento", "Pré-venda", "CRO"],
