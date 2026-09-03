@@ -3,6 +3,7 @@ import { RollText } from "@/components/RollText";
 
 const SOCIAL = [
   { label: "X — Soon" },
+  { label: "Instagram — Soon" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/augusto-vargas-p%C3%B3voa/" },
   { label: "GitHub", href: "https://github.com/agstudioweb" },
   { label: "Email", href: "mailto:augustov.arise@gmail.com" },
@@ -37,17 +38,23 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-1 md:col-start-3">
-            {SOCIAL.map((s) => (
+            {SOCIAL.map((s) =>
               s.href ? (
-                <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="roll-group w-fit">
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="roll-group w-fit"
+                >
                   <RollText>{s.label}</RollText>
                 </a>
               ) : (
                 <span key={s.label} className="w-fit cursor-default">
                   {s.label}
                 </span>
-              )
-            ))}
+              ),
+            )}
           </div>
 
           <div className="flex flex-col justify-between md:items-end">

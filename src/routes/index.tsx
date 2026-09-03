@@ -66,7 +66,7 @@ function Home() {
         <IntroWords />
         <Capabilities />
         <About />
-        
+
         <Process />
         <Packages />
         <Faq />

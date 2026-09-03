@@ -7,7 +7,7 @@ import { SectionId, TechRule, MicroLabel, CornerMarks } from "@/components/syste
 import { SERVICES, getService, type Service } from "@/data/services";
 
 const WHATSAPP = "https://wa.me/5514996800019";
-const SITE_URL = import.meta.env.VITE_SITE_URL ?? "https://agstudio.com.br";
+const SITE_URL = import.meta.env["VITE_SITE_URL"] ?? "https://agstudio.com.br";
 
 export const Route = createFileRoute("/servicos/$slug")({
   loader: ({ params }) => {
@@ -100,7 +100,9 @@ function ServiceLayout({ service }: { service: Service }) {
                 <article key={i.index} className="bg-ink p-7 md:p-9">
                   <span className="label-ag text-accent-ag">{i.index}</span>
                   <h2 className="display-lg mt-4 text-[clamp(1.25rem,2.2vw,1.9rem)]">{i.title}</h2>
-                  <p className="mt-3 max-w-[46ch] text-[0.95rem] leading-relaxed text-muted-ag">{i.body}</p>
+                  <p className="mt-3 max-w-[46ch] text-[0.95rem] leading-relaxed text-muted-ag">
+                    {i.body}
+                  </p>
                 </article>
               ))}
             </div>
@@ -117,10 +119,17 @@ function ServiceLayout({ service }: { service: Service }) {
 
             <ol className="mt-[6vh] space-y-0">
               {service.steps.map((s) => (
-                <li key={s.step} className="grid gap-3 border-t border-border py-6 md:grid-cols-12 md:items-baseline">
+                <li
+                  key={s.step}
+                  className="grid gap-3 border-t border-border py-6 md:grid-cols-12 md:items-baseline"
+                >
                   <span className="label-ag text-muted-ag md:col-span-1">{s.step}</span>
-                  <h3 className="display-lg text-[clamp(1.1rem,1.8vw,1.5rem)] md:col-span-4">{s.title}</h3>
-                  <p className="max-w-[52ch] text-[0.95rem] leading-relaxed text-muted-ag md:col-span-7">{s.body}</p>
+                  <h3 className="display-lg text-[clamp(1.1rem,1.8vw,1.5rem)] md:col-span-4">
+                    {s.title}
+                  </h3>
+                  <p className="max-w-[52ch] text-[0.95rem] leading-relaxed text-muted-ag md:col-span-7">
+                    {s.body}
+                  </p>
                 </li>
               ))}
             </ol>
@@ -147,7 +156,9 @@ function ServiceLayout({ service }: { service: Service }) {
                       +
                     </span>
                   </summary>
-                  <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-relaxed text-muted-ag">{f.a}</p>
+                  <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-relaxed text-muted-ag">
+                    {f.a}
+                  </p>
                 </details>
               ))}
             </div>
